@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="css/estilo.css" type="text/css">
+</head>
+<body>
+	<header><h2>Preguntas teóricas</h2></header>
+	<main>
+		<section>
+			<article>
+	            <ol>
+	                <li>Declaración recomendada para la creación de arrays en JavaScript</li>
+	                <p>var array = [];</p>
+	                <li>pop() y push()</li>
+	                <ol></br>
+	                    <li>Utilidad</li>
+	                    <p>Son métodos del objeto array para insertar, push(), y para extraer, pop(), elementos del final de un array.</p>
+	                    <li>¿Modifican el array original?</li>
+	                    <p>Si, resultará el mismo array con el elemento añadido o extraido.</p>
+	                    <li>¿Devuelven algún valor?</li>
+	                    <p>Si, pop() devuelve el elemento eliminado, y push() devuelve la nueva longitud del array.</p>
+	                </ol>
+	                <li>shift() y unshift()</li>
+	                <ol></br>
+	                    <li>Utilidad</li>
+	                    <p>Son métodos del objeto array para insertar, unshift(), y para extraer, shift(), elementos del principio de un array.</p>
+	                    <li>Modifican el array original?</li>
+	                    <p>Si, resultará el mismo array con el elemento añadido o extraido.</p>
+	                    <li>Devuelven algún valor?</li>
+	                    <p>Si, shift() devuelve el elemento eliminado y unshift() devuelve la nueva longitud del array.</p>
+	                </ol>
+	                <li>De los cuatro métodos anteriores, indica los recomendados para la inserción/eliminación de un elemento y por qué?</li>
+	                <p>Depende de la finalidad de la acción, si quieres trabajar con los elementos finales del array debes usar push() y pop(), mientras que para los primeros elementos se usa shift() y unshift(). Eso si, push() y pop() son más rápidos que los otros porque no tienen que reasignar posiciones al resto de los elementos que permanecen en el array.</p>
+	                <li>join() y split(), ¿son métodos de String o de Array?</li>
+	                <p>join() es un método de la clase Array, y split() es un método de la clase String.</p>
+	                <li>splice()</li>
+	                <ol></br>
+	                    <li>Utilidad</li>
+	                    <p>Sirve tanto para eliminar elementos de un array como para añadir o sustituir elementos ya existentes en el array.</p>
+	                    <li>Indica significado del primer argumento admitido: índice, cantidad o contenido</li>
+	                    <p>Es el índice desde el que actuará el método splice()</p>
+	                    <li>Indica significado del segundo argumento admitido: índice, cantidad o contenido</li>
+	                    <p>Es la cantidad de posiciones que se verán afectadas por el método splice()</p>
+	                    <li>Indica significado del resto de argumentos admitidos: índice, cantidad o contenido</li>
+	                    <p>El resto de argumentos hacen alusión al contenido, es decir, nuevos elementos a ser añadidos al array.</p>
+	                    <li>Modifican el array original?</li>
+	                    <p>Si, devuelven el nuevo array con las modificaciones efectuadas.</p>
+	                </ol>
+	                <li>slice()</li>
+	                <ol></br>
+	                    <li>Utilidad</li>
+	                    <p>Sirve tanto para seleccionar una serie de elementos en un array e insertarlos en otro array nuevo.</p>
+	                    <li>Indica significado del primer argumento admitido: índice, cantidad o contenido</li>
+	                    <p>Es el índice desde el que comenzar la operación de extracción, y será el primer elemento extraido.</p>
+	                    <li>Indica significado del segundo argumento admitido: índice, cantidad o contenido</li>
+	                    <p>Es el índice donde finalizará la extracción de elementos, y el elemento de este índice se excluye de dicha extracción.</p>
+	                    <li>Indica significado del resto de argumentos admitidos: índice, cantidad o contenido</li>
+	                    <p>No hay más argumentos.</p>
+	                    <li>Modifican el array original?</li>
+	                    <p>No, el array original no se altera.</p>
+	                </ol>
+	                <li>Un Array es un Object:</li>
+	                <ol></br>
+	                    <li>Indica resultado de typeof [ ]</li>
+	                    <p>typeof (con paréntesis o sin ellos) devuelve información acerca del tipo en forma de cadena. Con lo que para Array devolverá "object".</p>
+	                    <li>Método forEach() de un array. Indica utilidad y si funciona en todos los navegadores. Entrega un pequeño código que demuestre su uso</li>
+	                    <input id="foreach" type="button" value="Probar">
+	                    <div><img src="imagenes/foreach.jpg"/></div>
+	                    <p>forEach() Realiza la acción que se le especifique como argumento para cada elemento de un array. Su sintaxis es: array.forEach(función[, argumento]). El método forEach no modifica directamente el array original.</p>
+	                </ol>
+	            </ol>
+	        </article>
+        </section>
+	</main>
+	<input type="button" id="atras" value="ATRÁS" />
+	<script src="js/generico.js" type="text/javascript"></script>
+</body>
+</html>
