@@ -1,0 +1,55 @@
+<!-- Del documento LibrosWeb: Introducción a AJAX realiza la lectura comprensiva del apartado 3.2: Clases (introducción). Entrega los siguientes códigos: Factura, Array y String -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Javier Benítez</title>
+	<link rel="stylesheet" href="css/estilo.css" type="text/css">
+</head>
+<body>
+	<header><h1>Constructores en JavaScript (prototype)</h1></header>
+	<main>
+		<div id="div_factura">
+			<h3>Cliente</h3>
+			<table class="facturac_cliente"><tr><td>Nombre: </td>
+			<td><input type="text" id="nombre_cliente"></td></tr>
+			<tr><td>Dirección: </td>
+			<td><input type="text" id="direccion_cliente"></td></tr>
+			<tr><td>Teléfono: </td>
+			<td><input type="number" id="telefono_cliente"></td></tr>
+			<tr><td>NIF: </td>
+			<td><input type="text" id="nif_cliente"></td></tr></table>
+			<input type="button" id="enviar_cliente" value="Añadir cliente" />
+
+			<h3>Elementos</h3>
+			<table class="facturac_cliente"><tr><td>Descripcion: </td>
+				<td><input type="text" id="descripcion_elemento"></td></tr>
+				<tr><td>Cantidad: </td>
+					<td><input type="number" id="cantidad_elemento"></td></tr>
+				<tr><td>Precio: </td>
+					<td><input type="number" id="precio_elemento"></td></tr></table>
+			<input type="button" id="enviar_elemento" value="Añadir elemento" />
+
+			<h3>Empresa</h3>
+			<table class="facturac_cliente"><tr><td>Nombre: </td>
+				<td><input type="text" id="nombre_empresa"></td></tr>
+				<tr><td>Dirección: </td>
+					<td><input type="text" id="direccion_empresa"></td></tr>
+				<tr><td>Teléfono: </td>
+					<td><input type="number" id="telefono_empresa"></td></tr>
+				<tr><td>NIF: </td>
+					<td><input type="text" id="nif_empresa"></td></tr></table>
+			<input type="button" id="enviar_empresa" value="Añadir empresa" />
+
+			<h3>Factura</h3>
+			<input type="button" id="mostrar_factura" value="Mostrar factura" />
+			<input type="button" id="reset" value="Borrar factura" /></div>
+		<div id="informacion_cliente"></div>
+		<div id="informacion_elementos"></div>
+		<div id="informacion_empresa"></div>
+		<div id="informacion_factura"></div>
+	</main>
+	<input type="button" id="atras" value="ATRÁS">
+	<script src="js/constructores.js" type="text/javascript"></script>
+</body>
+</html>
