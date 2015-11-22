@@ -22,7 +22,7 @@ function mostrarDatos(){
 	if (bandera){
 		document.open();
 		document.write('<html><head><title>Javier Benítez del Pozo</title><link rel="stylesheet" href="css/estilo.css" '+
-			'type="text/css" media="all"></head><body>')
+			'type="text/css" media="all"><meta charset="UTF-8"></head><body>')
 		document.write("<p>Buenos días "+ nombreApe +"</p>");
 		document.write("<p>Tu nombre tiene: "+ nombreApe.length +" caracteres</p>");
 		document.write("<p>La primera letra E de tu nombre está en la posición: "+nombreApe.indexOf('e')+"</p>");

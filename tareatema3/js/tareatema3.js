@@ -35,15 +35,18 @@
 //         Estética (sin librerías)
 //         Presentación del código (comentarios, identación...)
 
-window.onload = function(){
+window.addEventListener('load', function(){
 	document.getElementById('nueva_ventana').addEventListener("click", escribirNuevaVentana, false);
-
-}
+	document.getElementById("atras").onclick=function(){
+		botonatras = document.getElementById('atras');
+		document.location.href = "../index.html";
+	}
+});
 
 function escribirNuevaVentana(){
 	var ventanaNueva = window.open('', 'Nueva ventana', 'width=800', 'height=600');
 	ventanaNueva.document.write('<html><head><title></title><script src="js/tareatema3.1.js" type="text/javascript"></script>'+
-		'<link rel="stylesheet" href="css/estilo.css" type="text/css" media="all"></head><body><h1>Ventana Nueva</h1>');
+		'<link rel="stylesheet" href="css/estilo.css" type="text/css" media="all"><meta charset="UTF-8"></head><body><h1>Ventana Nueva</h1>');
 	ventanaNueva.document.write('<h3>URL completa: '+location.href+'</h3>');
 	ventanaNueva.document.write('<h3>Protocolo utilizado: '+location.protocol+'</h3>');
 	ventanaNueva.document.write('<h3>Nombre del código del navegador: '+navigator.userAgent+'</h3>');
@@ -57,6 +60,5 @@ function escribirNuevaVentana(){
     	'</div>');
 	ventanaNueva.document.write('</body></html>');
 	ventanaNueva.document.close();
-	var ventanaNueva2 = window.open(' http://www.iesgrancapitan.org/portal/', 'width=800', 'height=600');
-	ventanaNueva2.document.close();
+	var ventanaNueva2 = window.open('http://www.iesgrancapitan.org/portal/', 'width=800 height=600');
 }

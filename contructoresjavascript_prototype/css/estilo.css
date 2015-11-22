@@ -66,6 +66,15 @@ header{
 	margin: 5px;
 }
 
+#error{
+	color: #ba0008;
+	font-size: 15px;
+	font-style: italic;
+}
+
+label,input[type=text]{
+	display: block;
+}
 
 input[type=submit], input[type=button]{
 	margin: 7px;
