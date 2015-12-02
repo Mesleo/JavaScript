@@ -150,4 +150,8 @@ var error = document.getElementById('error');
 
 window.addEventListener('load', function(){
     document.getElementById('crear_gato').addEventListener('click', crearGato, false);
+    document.getElementById("atras").addEventListener("click", function(){
+        botonatras = document.getElementById('atras');
+        document.location.href = "../index.html";
+    });
 });
