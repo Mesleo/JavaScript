@@ -1,0 +1,39 @@
+<!-- Lindo gatito
+Crea una clase Gato, y a partir de ella crea tantos gatos como quiera el usuario.
+Cada gato tendrá un nombre, una fecha de nacimiento, una raza y un peso (1-15). Cada vez que crees un objeto gato aparecerá una ventana nueva con una imagen que cambiará en función de su estado (comiendo, durmiendo y jugando, que es su estado habitual). El usuario podrá averiguar la edad del gato partiendo de un evento.
+
+    Evita las cajas de texto
+    No puedes usar ni alert ni prompt
+    Hazlo lo más dinámico posible.
+    Utiliza prototype para los métodos -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Lindo gatito</title>
+    <link rel="stylesheet" href="css/estilo.css" type="text/css">
+</head>
+<body>
+<header><h1>Lindo gatito</h1></header>
+<main>
+    <div id="error"></div>
+    <div id="array">
+        <label >Nombre: </label>
+        <input type="text" id="nombre">
+        <label >Raza: </label>
+        <select name="raza" id="raza">
+            <option value="persa">Persa</option>
+            <option value="mainnecoon">Mainne coon</option>
+            <option value="nebelung">Nebelung</option>
+            <option value="peterbald">Peterbald</option>
+        </select>
+        <label >Fecha de nacimiento: </label>
+        <input type="text" id="fecha_nac" placeholder="dd/mm/YYYY"/>
+        <input type="number" id="peso" value="2" /> Kg.
+        <input type="button" id="crear_gato" value="Crear">
+    </div>
+</main>
+<input type="button" id="atras" value="ATRÁS" />
+<script src="js/lindo_gatito.js" type="text/javascript"></script>
+</body>
+</html>
