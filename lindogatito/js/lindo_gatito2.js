@@ -159,7 +159,7 @@ function crearGato(){
     var raza = window.opener.document.getElementById('raza').value
     var fechaNac = String(window.opener.document.getElementById('fecha_nac').value.trim());
     peso = Number(window.opener.document.getElementById('peso').value.trim());
-    var fecha = fechaNac.split("/");
+    var fecha = fechaNac.split("/") || fechaNac.split("-");
     var dias = Number(fecha[0]);
     var mes = Number(fecha[1]);
     var anio = Number(fecha[2]);

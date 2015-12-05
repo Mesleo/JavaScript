@@ -19,7 +19,7 @@ a:visited {
     margin-top: 25px;
 }
 
-#atras:hover {
+#atras:hover, #reset:hover {
     border: inset 2px #870808;
 }
 

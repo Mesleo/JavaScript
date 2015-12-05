@@ -1,0 +1,46 @@
+<!-- Mediante prototype, agrega los métodos sumar, restar, trasponer y multiplicar a la clase ArraysMatematicos. Recuerda que el estado de un array deberían de ser los elementos.
+Recuerda las restricciones y posibilidades de un Array:
+Sobre las dimensines de los arrays implicados (unidimensional, bidimensional...)
+Sobre las longitudes de los arrays implicados (1 en adelante)
+Sobre los contenidos de los arrays implicados (numéricos)
+Podemos rellenar un Array con valores aleatorios o directamente desde teclado.
+Una vez creada la clase, demuestra su funcionamiento en una página bien diseñada. Evita las cajas de texto y hazla lo más dinámica posible. -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Array matemático</title>
+    <link rel="stylesheet" href="css/estilo.css" type="text/css">
+</head>
+<body>
+<header><h1>Array matemático</h1></header>
+<main>
+    <div id="error"></div>
+    <div id="array">
+        <h3>Array 1</h3>
+        <label >Filas: </label>
+        <input type="text" id="filas">
+        <label >Columnas: </label>
+        <input type="text" id="columnas">
+        <input type="button" id="crear_matriz" value="Crear" />
+        <input type="button" id="mostrar_matriz" value="Mostrar" />
+        <h3>Array 2</h3>
+        <input type="button" id="crear_matriz2" value="Crear" />
+        <input type="button" id="mostrar_matriz2" value="Mostrar" />
+        <h3>Operaciones</h3>
+        <input type="button" id="sumar" value="Sumar" />
+        <input type="button" id="restar" value="Restar" />
+        <input type="button" id="multiplicar" value="Multiplicar" />
+        <input type="button" id="trasponer" value="Trasponer" />
+    </div>
+    <div id="resultados">
+        <div id="mostrar1"></div>
+        <div id="mostrar2"></div>
+        <div id="mostrar_resultado"></div>
+        <div id="mostrar_traspuesta2"></div>
+    </div>
+</main>
+<input type="button" id="atras" value="ATRÁS" /><input type="button" id="reset" value="Reset" />
+<script src="js/arraymatematicos.js" type="text/javascript"></script>
+</body>
+</html>

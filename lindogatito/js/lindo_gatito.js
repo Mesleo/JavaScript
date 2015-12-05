@@ -103,7 +103,7 @@ function mostrarVentanaGato(gato) {
             foto_gato = "imagenes/peterbald.png";
             break;
     }
-    var ventanaGato = window.open('', 'Lindo Gatito');
+    var ventanaGato = window.open('', '');
     ventanaGato.document.open();
     ventanaGato.document.write('<html><head><meta charset="UTF-8"><title>' + gato.nombre + '</title>' +
         '<script src="js/lindo_gatito2.js" type="text/javascript"></script>' +
@@ -125,7 +125,8 @@ function mostrarVentanaGato(gato) {
         '<input id="jugar" type="button" value="Jugar"/></div></body></html>');
     ventanaGato.document.close();
 }
-function crearGato(nombre, raza, fechaNac, peso){
+
+function crearGato() {
     var nombre = String(document.getElementById('nombre').value.trim());
     var raza = document.getElementById('raza').value;
     var fechaNac = document.getElementById('fecha_nac').value;
@@ -133,25 +134,33 @@ function crearGato(nombre, raza, fechaNac, peso){
     var dias = Number(fecha[0]);
     var mes = Number(fecha[1]);
     var anio = Number(fecha[2]);
+    var date = new Date(anio + '-' + mes + '-' + dias);
+    var hoy = new Date();
     var peso = document.getElementById('peso').value.trim();
-    if(nombre.length==0 || !comprobarFecha(fechaNac) || !comprobarAnio(anio)
-        || (mes<1 || mes>12) || !comprobarPeso(peso)){
-        error.innerHTML = '<h2 id="error">No se ha podido crear el gato</h2> ';
+    if (nombre.length == 0)
+        error.innerHTML = '<h2 id="error">No se ha podido crear el gato, nombre no válido</h2> ';
+    else if (!comprobarFecha(fechaNac) || !comprobarAnio(anio) || (mes < 1 || mes > 12))
+        error.innerHTML = '<h2 id="error">No se ha podido crear el gato, la fecha de nacimiento es inválida</h2> ';
+    else if(date>hoy)
+        error.innerHTML = '<h2 id="error">Es imposible que el gato "haya nacido" un día posterior a hoy</h2> ';
+    else if(!comprobarPeso(peso)){
+        error.innerHTML = '<h2 id="error">No se ha podido crear el gato, peso incorrecto</h2> ';
     }else{
         nombre = nombre.capitalize();
         var lindoGatito = new LindoGatito(nombre, raza, fechaNac, peso);
         arrayGatos.push(lindoGatito);
         mostrarVentanaGato(lindoGatito);
-
     }
 }
-var arrayGatos = [];
+
 var error = document.getElementById('error');
 
 window.addEventListener('load', function(){
     document.getElementById('crear_gato').addEventListener('click', crearGato, false);
     document.getElementById("atras").addEventListener("click", function(){
-        botonatras = document.getElementById('atras');
         document.location.href = "../index.html";
+    });
+    document.getElementById("reset").addEventListener("click", function(){
+        document.location.reload();
     });
 });
