@@ -21,6 +21,9 @@ ArrayMatematico.prototype.crearMatriz = function(){
 ArrayMatematico.prototype.crearMatrizMultiplicacion = function(){
     for (var i = 0; i < this.fila; i++){
         this.contenido[i]=[];
+        for(var j = 0; j < this.columna; j++){
+            this.contenido[i][j] = 0;
+        }
     }
 }
 
@@ -28,7 +31,7 @@ ArrayMatematico.prototype.trasponer = function(){
     var traspuesta = new ArrayMatematico(this.columna, this.fila);
     traspuesta.crearMatrizMultiplicacion();
     for (var i = 0; i < this.fila; i++){
-        traspuesta.contenido.push([])
+        traspuesta.contenido.push([]);
         for(var j = 0; j < this.columna; j++){
             traspuesta.contenido[j][i] = this.contenido[i][j];
         }
@@ -38,11 +41,11 @@ ArrayMatematico.prototype.trasponer = function(){
 
 
 ArrayMatematico.prototype.multiplicar = function(matriz2){
-    multiplicacion = new ArrayMatematico(this.fila, matriz2.columna);
-    multiplicacion.crearMatriz();
+    multiplicacion = new ArrayMatematico(this.fila, this.columna);
+    multiplicacion.crearMatrizMultiplicacion();
     for (var i = 0; i < this.fila; i++){
         multiplicacion.contenido.push([]);
-        for (var j = 0; j < matriz2.columna; j++){
+        for (var j = 0; j < this.columna; j++){
             for (var k = 0; k < this.columna; k++) {
                 multiplicacion.contenido[i][j] += this.contenido[i][k] * matriz2.contenido[k][j];
             }
@@ -132,6 +135,7 @@ window.addEventListener("load", function(){
             error.innerHTML = e.name + " : " + e.mensaje;
             document.getElementById('filas').value = "";
             document.getElementById('columnas').value = "";
+            info3.innerHTML = "";
         }
     });
     document.getElementById('crear_matriz2').addEventListener('click', function () {
@@ -146,6 +150,7 @@ window.addEventListener("load", function(){
             error.innerHTML = "";
         } catch (e) {
             error.innerHTML = e.name + " : " + e.mensaje;
+            info3.innerHTML = "";
             document.getElementById('filas').value = "";
             document.getElementById('columnas').value = "";
         }
@@ -156,7 +161,9 @@ window.addEventListener("load", function(){
         try {
             matriz3 = matriz1.sumar(matriz2);
             matriz3.mostrarMatriz("Suma: <br/>", info3);
+            error.innerHTML = "";
         } catch (e) {
+            info3.innerHTML = "";
             error.innerHTML="<h3 class='error'>Es necesario que estén creadas las dos matrices</h3>";
         }
         info4.innerHTML = "";
@@ -167,18 +174,28 @@ window.addEventListener("load", function(){
         try {
             matriz3 = matriz1.restar(matriz2);
             matriz3.mostrarMatriz("Resta: <br/>", info3);
+            error.innerHTML = "";
         } catch (e) {
+            info3.innerHTML = "";
             error.innerHTML="<h3 class='error'>Es necesario que estén creadas las dos matrices</h3>";
         }
         info4.innerHTML = "";
     });
     document.getElementById('multiplicar').addEventListener('click', function () {
         matriz3 = new ArrayMatematico(filas, columnas);
+        matriz3.crearMatrizMultiplicacion();
+
         try {
+            if(matriz1.fila != matriz2.columna){
+                error.innerHTML = "<h3 class='error'>El número de filas de la matriz A debe ser igual al número de columnas" +
+                    " de la matriz B</h3>";
+                return;
+            }
             matriz3 = matriz1.multiplicar(matriz2);
-            matriz3.crearMatriz();
             matriz3.mostrarMatriz("Multiplicación: <br/>", info3);
+            error.innerHTML = "";
         } catch (e) {
+            info3.innerHTML = "";
             error.innerHTML="<h3 class='error'>Es necesario que estén creadas las dos matrices</h3>";
         }
         info4.innerHTML = "";
@@ -193,7 +210,9 @@ window.addEventListener("load", function(){
             matriz4 = matriz2.trasponer();
             matriz3.mostrarMatriz("Traspuesta 1: <br/>", info3);
             matriz4.mostrarMatriz("Traspuesta 2: <br/>", info4);
+            error.innerHTML = "";
         } catch (e) {
+            info3.innerHTML = "";
             error.innerHTML="<h3 class='error'>Es necesario que estén creadas las dos matrices</h3>";
         }
     });
