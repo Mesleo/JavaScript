@@ -1,0 +1,78 @@
+<!--Crea un formulario con todos los tipos de controles y realiza todas las validaciones posibles mediante JavaScript.-->
+<!--Utiliza el modelo de registro avanzado de eventos según W3C (addEventListener), así como las expresiones regulares.-->
+<!--Asegúrate de validar lo siguiente:-->
+<!--Obligatoriedad (campo de texto, opción seleccionada (checkbox, radio button y selección)-->
+<!--Tipo de dato introducido (numérico...)-->
+<!--Dirección de correo válida-->
+<!--Número de DNI válido-->
+<!--Fecha válida-->
+<!--Número de teléfono-->
+<!--Número de cuenta corriente-->
+<!--URL-->
+<!--Asegúrate de que:-->
+
+<!--Al perder el foco de cada control se comprueba su validación.-->
+<!--Los errores los muestras mediante css.-->
+<!--Al enviar el formulario se realizan TODAS LAS VALIDACIONES, yéndose el foco al primer error.-->
+<!--Procura aislar las validaciones del interfaz del usuario (arquitectura de tres capas)-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Formulario completito</title>
+    <link rel="stylesheet" href="../css/bootstrap.css" type="text/css">
+    <link rel="stylesheet" href="../css/estilo.css" type="text/css">
+    <script type="text/javascript" src="js/formulario.js"></script>
+    <!--<script type="text/javascript" src="js/persona.js"></script>-->
+</head>
+<body>
+    <header><h1>Formulario completito</h1></header>
+    <main>
+        <section>
+            <article>
+                <form class="formulario_completito" action method="post" >
+                    <div>
+                        <label for="nombre">Nombre: </label><input type="text" class="valido" id="nombre" placeholder="Juan Francisco"><span class="error" id="spanNombre"></span>
+                    </div>
+                    <div>
+                        <label for="apellido1">Primer apellido: </label><input type="text" class="valido" id="apellido1" placeholder="Pérez"><span class="error" id="spanPrimerApellido"></span>
+                    </div>
+                    <div>
+                        <label for="apellido2">Segundo apellido: </label><input type="text" class="valido" id="apellido2" placeholder="Valero"><span class="error" id="spanSegundoApellido"></span>
+                    </div>
+                    <div>
+                        <label for="fechaNacimiento">Fecha nacimiento: </label><input type="text" class="valido" id="fechaNac" placeholder="10/01/2001"><span class="error" id="spanFechaNacimiento"></span>
+                    </div>
+                    <div>
+                        <label for="email">Email: </label><input type="email" class="valido" id="email" placeholder="jfranciso_10.01.2001@jfranciso.es"><span class="error" id="spanEmail"></span>
+                    </div>
+                    <div>
+                        <label for="numeroTelefono">Teléfono: </label><input type="number" class="valido" id="numeroTelefono" placeholder="555666777"><span class="error" id="spanTelefono"></span>
+                    </div>
+                    <div>
+                        <label for="url">URL: </label><input type="url" class="valido" id="url" placeholder="http://www.misitio.com"><span class="error" id="spanUrl"></span>
+                    </div>
+                    <div>
+                        <label for="sexo">Sexo: </label>
+                        <input id="sexo1" type="radio" name="sexo" class="valido"> Masculino
+                        <input id="sexo2" type="radio" name="sexo" class="valido"> Femenino
+                        <span id="sexo_incorrecto"></span>
+                    </div>
+                    <div>
+                        <label for="dni">DNI: </label><input type="text" class="valido" id="dni" placeholder="000000000X"><span class="error" id="spanDni"></span>
+                    </div>
+                    <div>
+                        <label for="cuentaCorriente">Número de cuenta corriente: </label><input type="text" id="cuentaCorriente" placeholder="XXXX-XX-XX-XXXXXXXXXX"><span class="error" id="spanCuentaCorriente"></span>
+                    </div>
+                    <div>
+                        <label for="casillaVerificacion">Acepto todos los términos y licencias</label><input type="checkbox" id="terminos"><span class="error" id="spanTerminoss"></span>
+                    </div>
+                    <div id="div_enviar">
+                            <input type="button" id="enviar" value="Aceptar">
+                    </div>
+                </form>
+            </article>
+        </section>
+    </main>
+</body>
+</html>

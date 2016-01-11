@@ -48,6 +48,5 @@ window.addEventListener("load", function(){
 	acumularPrimos();
 	mostrarPrimos();   
 })();
-
-})
+});
 

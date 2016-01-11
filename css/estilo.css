@@ -1,121 +1,156 @@
-a{
-	text-decoration: none;
+a {
+    text-decoration: none;
 }
 
-a:visited{
-	text-decoration: none;
+a:visited {
+    text-decoration: none;
 }
 
-#atras {
-	background: linear-gradient(65deg, #121010, #FF0000);
-	color: #FFFFFF;
-	font-weight: bold;
-	width: 120px;
-	height: 30px;
-	border: outset 2px #870808;
-	display: block;
-	border-radius: 10px;
-	margin-top: 25px;
-	margin-left: 20px;
+#atras, #reset {
+    background: linear-gradient(65deg, #121010, #FF0000);
+    color: #FFFFFF;
+    font-weight: bold;
+    width: 120px;
+    height: 30px;
+    border: outset 2px #870808;
+    display: inline-block;
+    margin-left: 20%;
+    border-radius: 10px;
+    margin-top: 25px;
 }
 
-#atras:hover{
-	border: inset 2px #870808;
+#atras:hover, #reset:hover {
+    border: inset 2px #870808;
 }
 
-body{
-	background-color: #B9EAAF;
-	font-family: sans-serif;
-	font-size: 16px;
-	width: 75%;
-	margin: 0 auto;
-	margin-top: 20px;
-	padding: 20px;
-	border: 1px solid;
-	box-shadow: 10px 8px 9px #666262;
+body {
+    background-color: #B9EAAF;
+    font-family: sans-serif;
+    font-size: 16px;
+    width: 75%;
+    margin: 0 auto;
+    margin-top: 20px;
+    padding: 20px;
+    border: 1px solid;
+    box-shadow: 10px 8px 9px #666262;
 }
 
-#erroneo{
-	color: #FA0808;
+#celda_matriz {
+    border: 2px solid rgba(0, 0, 0, 0.82);
+    background-color: rgba(0, 50, 232, 0.82);
 }
 
-#formulario{
-	display: inline-block;
-	margin-bottom: 10px;
+#datos_gato {
+    width: 50%;
+    margin-top: 10px;
+    padding: 10px;
+    background: linear-gradient(80deg, #a6795c, #393939);
+    border: 2px solid #00dd16;
+    border-radius: 10px 2px 10px 2px;
+    box-shadow: 7px 6px 7px #8e8e8e;
 }
 
-header{
-	border: 2px solid;
-	background-color: #00951C;
-	border-radius: 20px 20px 0px 0px;
-	min-height: 70px;
-	padding: 20px;
-	margin-bottom: 50px;
+.error {
+    color: #FA0808;
+    font-size: 12px;
 }
 
-input[type=text]{
-	display: block;
-	margin: 3px;
+#erroneo {
+    color: #FA0808;
 }
 
-input[type=submit], input[type=button]{
-	margin: 7px;
-	width: 140px;
-	border-radius: 4px;
-	box-shadow: 3px 2px 3px;
+.formulario_completito{
+    width: 90%;
+    margin: auto;
+    border: 2px groove #000000;
+    border-radius: 0px 30px 0px 30px;
+    box-shadow: 10px 8px 15px 5px #8e8e8e;
+    padding: 20px;
+    background-color: rgba(116, 109, 113, 0.86);
+    color: #000000;
+    font-family: "Times New Roman";
+    font-size: 14px;
 }
 
-label{
-	margin-right: 4px;
-	margin-left: 6px;
+.formulario_completito div label{
+    width: 35%;
+    display: inline-block;
+    vertical-align: top;
+    margin-right: 50px;
+    margin-bottom: 10px;
 }
 
-#multiplos{
-	display: inline-block;
+.formulario_completito input[type=text], .formulario_completito input[type=date], .formulario_completito input[type=email],
+.formulario_completito input[type=number], .formulario_completito input[type=url], .formulario_completito input[type=password],.formulario_completito input[type=password], .formulario_completito select{
+    width: 30%;
+    border-radius: 10px;
+    border: 1px inset #363d46;
+    background-color: #fdfff6;
+    padding: 3px;
+    margin-right: 5px;
+    outline: none;
 }
 
-#multiplos input{
-	display: block;
+.formulario_completito input[type=radio]{
+    margin-bottom: 10px;
+    margin-top: 8px;
 }
 
-.multiplo{
-	line-height: 10px;
+.formulario_completito input[type=range]{
+    margin-top: 5px;
+    background: #110000;
 }
 
-#numeros{
-	width: 30%;
-	margin-left: 20px;
-	display: inline-block;
+.formulario_completito #terminos{
+    margin-top: 5px;
+    height: 15px;
+    width: 15px;
 }
 
-.oculto { display: none; }
-
-#principal{
-	display: block;
+.formulario_completito #div_enviar{
+    width:60%;
+    margin: auto;
 }
 
-#respuestas{
-	width: 45%;
-	margin-top: -0.3em;
-	margin-left: 20px;
-	vertical-align: top;
-	display: inline-block;
+header {
+    border: 2px solid;
+    background-color: #00951C;
+    border-radius: 20px 20px 0px 0px;
+    min-height: 70px;
+    padding: 20px;
+    margin-bottom: 50px;
 }
 
-td{
-	border: 1px solid #FF0000;
+input[type=submit], input[type=button] {
+    margin: 7px;
+    margin-bottom: 15px;
+    width: 20%;
+    border-radius: 4px;
+    box-shadow: 3px 2px 3px;
 }
 
-ul{
-	-webkit-columns: 2;
-	-moz-columns: 2;
-	-o-columns: 2;
-	columns: 2;
+#matriz {
+    background-color: rgba(0, 50, 232, 0.82);
+    border: 2px solid rgba(0, 0, 0, 0.82);
 }
 
-ul li{
-	margin-right: 10px;
-	list-style: decimal;
+.rango{
+    margin-left: 15px;
+    font-size: 14px;
+    vertical-align: 40%;
 }
 
-.visible { display: inline;}
+#resultados div {
+    width: 30%;
+    display: inline-block;
+}
+
+.valido{
+    border: 1px solid #110000;
+    box-shadow: 1px 1px 1px 1px #656387;
+}
+
+.invalido{
+    border: 1px solid red;
+    box-shadow: 2px 2px 2px 1px #870808;
+}
