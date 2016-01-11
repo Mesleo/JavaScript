@@ -51,10 +51,6 @@ function comprobarInputEmail(input){
     var exp = /^[_a-z0-9-]+(.[_a-z0-9-]+)*@[a-z0-9-]+(.[a-z0-9-]+)*(.[a-z]{2,4})$/i;
     if(exp.test(input.value.trim()))
         return true;
-    else {
-        //input.focus();
-        return false;
-    }
 }
 
 function comprobarInputTexto(input){
@@ -75,31 +71,33 @@ function comprobarInputRadio(input, info){
             break;
         }
     }
-    if(checkeado == true){
-        return true;
-    }else return false;
+    if(checkeado == false)
+        return false;
+}
+
+function validarFormatoFecha(campo) {
+    var RegExPattern = /^\d{1,2}\/\d{1,2}\/\d{2,4}$/;
+    return !!((campo.match(RegExPattern)) && (campo != ''));
 }
 
 function comprobarInputFecha(input) {
-    try {
-        var valoresFecha = input.value.split("/");
-        var anio = valoresFecha[2];
-        var mes = valoresFecha[1];
-        var dia = valoresFecha[0];
-        if (dia.charAt(0) == "0")dia = dia.replace(dia.charAt(0), "");
-        if (mes.charAt(0) == "0")mes = mes.replace(mes.charAt(0), "");
-        input.value = dia + "/" + mes + "/" + anio;
-        var fechaIntroducida = new Date(anio + "-" + mes + "-" + dia);
-        console.log(fechaIntroducida);
-        var hoy = new Date();
-        console.log(hoy);
-        if (fechaIntroducida == "Invalid Date" ||  input.value != fechaIntroducida.toLocaleDateString() || hoy < fechaIntroducida) {
-            return false
-        }
-    }catch(e){
-        var inputfechaNac = document.getElementById('fechaNac');
-        inputfechaNac.style.border = "2px solid #8A0808";
+    var fechaf = input.value.split("/");
+    var day = fechaf[0];
+    var month = fechaf[1];
+    var year = fechaf[2];
+    var date = new Date(year+'-'+month+'-0');
+    var x = new Date();
+    x.setFullYear(fechaf[2],fechaf[1]-1,fechaf[0]);
+    var hoy = new Date();
+    var correctaFecha = false;
+    if(validarFormatoFecha(input.value.trim()))
+        correctaFecha = true;
+    if((day-0)>(date.getDate())){
+        correctaFecha = true;
     }
+    if (x <= hoy)
+        correctaFecha = true;;
+    return correctaFecha;
 }
 
 function comprobarInputUrl(url) {
