@@ -20,33 +20,6 @@
  Procura aislar las validaciones del interfaz del usuario (arquitectura de tres capas)
  */
 
-function abrirVentanaNueva(obejto){
-    var ventanaNueva = window.open('','');
-    ventanaNueva.document.write('<!DOCTYPE html>'+
-        '<html lang="en">'+
-        '<head>'+
-            '<meta charset="UTF-8">'+
-           '<title>Información</title>'+
-            '<link rel="stylesheet" href="../css/estilo.css" type="text/css">'+
-        '</head>'+
-        '<body>'+
-            '<header>'+
-                '<h1>Información</h1>'+
-            '</header>'+
-            '<main>'+
-                '<section>'+
-                    '<article>'+
-                        '<div id="informacion">Nombre: '+obejto.nombre+' '+obejto.apellido1+' '+obejto.apellido2+'<br>Email: '+obejto.email+
-                        '</div>'+
-                    '</article>'+
-                '</section>'+
-            '</main>'+
-        '<script type="text/javascript" src="js/persona.js"></script>'+
-        '</body>'+
-        '</html>');
-    window.document.close();
-}
-
 function comprobarInputEmail(input){
     var exp = /^[_a-z0-9-]+(.[_a-z0-9-]+)*@[a-z0-9-]+(.[a-z0-9-]+)*(.[a-z]{2,4})$/i;
     if(exp.test(input.value.trim()))
@@ -210,11 +183,11 @@ function comprobarCampos(){
         }else
             modificarEstado(inputCuentaCorriente, spanCuentaCorriente, "", "2px solid #04B404");
     });
-    //if(!checkTerminos.checked){
-    //    spanTerminos.innerHTML += '<h4>No has aceptado los términos</h4>';
-    //}else {
-    //    spanTerminos.innerHTML += '<h4>Has aceptado los términos</h4>';
-    //}
+    if(!checkTerminos.checked){
+        spanTerminos.innerHTML = '<h4>No has aceptado los términos</h4>';
+    }else {
+        spanTerminos.innerHTML = '<h4>Has aceptado los términos</h4>';
+    }
     document.getElementById('enviar').addEventListener('click', function(){
         var foco;
             if(!comprobarInputTexto(inputNombre)){
