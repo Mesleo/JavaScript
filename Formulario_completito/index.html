@@ -41,10 +41,10 @@
                         <label for="apellido2">Segundo apellido: </label><input type="text" class="valido" id="apellido2" placeholder="Valero"><span class="error" id="spanSegundoApellido"></span>
                     </div>
                     <div>
-                        <label for="fechaNacimiento">Fecha nacimiento: </label><input type="text" class="valido" id="fechaNac" placeholder="10/01/2001"><span class="error" id="spanFechaNacimiento"></span>
+                        <label>Fecha nacimiento: </label><input type="text" class="valido" id="fechaNac" placeholder="10/01/2001"><span class="error" id="spanFechaNacimiento"></span>
                     </div>
                     <div>
-                        <label for="email">Email: </label><input type="email" class="valido" id="email" placeholder="jfranciso_10.01.2001@jfranciso.es"><span class="error" id="spanEmail"></span>
+                        <label for="email">Email: </label><input type="email" class="valido" id="email" placeholder="jfrancisco_10.01.2001@jfrancisco.es"><span class="error" id="spanEmail"></span>
                     </div>
                     <div>
                         <label for="numeroTelefono">Teléfono: </label><input type="number" class="valido" id="numeroTelefono" placeholder="555666777"><span class="error" id="spanTelefono"></span>
@@ -53,10 +53,23 @@
                         <label for="url">URL: </label><input type="url" class="valido" id="url" placeholder="http://www.misitio.com"><span class="error" id="spanUrl"></span>
                     </div>
                     <div>
-                        <label for="sexo">Sexo: </label>
+                        <label>Sexo: </label>
                         <input id="sexo1" type="radio" name="sexo" class="valido"> Masculino
                         <input id="sexo2" type="radio" name="sexo" class="valido"> Femenino
                         <span id="sexo_incorrecto"></span>
+                    </div>
+                    <div>
+                        <label for="permisos">Tipos de permisos:</label><select name="permisos" id="permisos" multiple>
+                            <option value="0">Elige una opción</option>
+                            <option value="1">A</option>
+                            <option value="2" selected>B</option>
+                            <option value="3">B + E</option>
+                            <option value="4">C</option>
+                            <option value="5">C + E</option>
+                            <option value="6">D</option>
+                            <option value="7">D +E</option>
+                        </select>
+                        <span id="spanPermisos"></span>
                     </div>
                     <div>
                         <label for="dni">DNI: </label><input type="text" class="valido" id="dni" placeholder="000000000X"><span class="error" id="spanDni"></span>
@@ -65,7 +78,7 @@
                         <label for="cuentaCorriente">Número de cuenta corriente: </label><input type="text" id="cuentaCorriente" placeholder="XXXX-XX-XX-XXXXXXXXXX"><span class="error" id="spanCuentaCorriente"></span>
                     </div>
                     <div>
-                        <label for="casillaVerificacion">Acepto todos los términos y licencias</label><input type="checkbox" id="terminos"><span class="error" id="spanTerminos"></span>
+                        <label>Acepto todos los términos y licencias</label><input type="checkbox" id="terminos"><span class="error" id="spanTerminos"></span>
                     </div>
                     <div id="div_enviar">
                             <input type="button" id="enviar" value="Aceptar">

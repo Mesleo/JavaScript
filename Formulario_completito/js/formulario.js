@@ -46,6 +46,20 @@ function comprobarInputRadio(input, info){
     }
     if(checkeado == false)
         return false;
+    else return true;
+}
+
+function comprobarSelect(input, info){
+    var checkeado = false;
+    for (var i = 0; i < input.length; i++) {
+        if (input[i].checked) {
+            checkeado = true;
+            break;
+        }
+    }
+    if(checkeado == false)
+        return false;
+    else return true;
 }
 
 function validarFormatoFecha(campo) {
@@ -58,19 +72,15 @@ function comprobarInputFecha(input) {
     var day = fechaf[0];
     var month = fechaf[1];
     var year = fechaf[2];
-    var date = new Date(year+'-'+month+'-0');
-    var x = new Date();
-    x.setFullYear(fechaf[2],fechaf[1]-1,fechaf[0]);
+    var date = new Date(year+'-'+month+'-'+day);
     var hoy = new Date();
-    var correctaFecha = false;
-    if(validarFormatoFecha(input.value.trim()))
-        correctaFecha = true;
-    if((day-0)>(date.getDate())){
-        correctaFecha = true;
-    }
-    if (x <= hoy)
-        correctaFecha = true;;
-    return correctaFecha;
+    if(!validarFormatoFecha(input.value.trim()))
+        return false;
+    else if(date.getDate() != day || date.getMonth() != month-1 || date.getFullYear()!=year){
+        return false;
+    }else if (hoy <= date)
+        return false;
+    else return true;
 }
 
 function comprobarInputUrl(url) {
@@ -107,6 +117,8 @@ function comprobarCampos(){
     var inpSexo1 = document.getElementById('sexo1');
     var inpSexo2 = document.getElementById('sexo2');
     var spanSexo = document.getElementById('sexo_incorrecto');
+    var selectPermisos = document.getElementById('permisos');
+    var spanPermisos = document.getElementById('spanPermisos');
     var inputDni = document.getElementById('dni');
     var inputCuentaCorriente = document.getElementById('cuentaCorriente');
     var checkTerminos = document.getElementById('terminos');
@@ -120,6 +132,7 @@ function comprobarCampos(){
     var spanUrl = document.getElementById('spanUrl');
     var spanTelefono = document.getElementById('spanTelefono');
     var spanCuentaCorriente = document.getElementById('spanCuentaCorriente');
+    var enviar = document.getElementById('enviar');
     inputNombre.focus();
     var persona;
     inputNombre.addEventListener('blur',function(){
@@ -171,6 +184,12 @@ function comprobarCampos(){
             spanSexo.innerHTML = "";
         }
     });
+    selectPermisos.addEventListener('blur', function(){
+        if (!comprobarSelect(selectPermisos, spanPermisos)) {
+            spanPermisos = "Debes elegir una opción al menos";
+        }else
+            spanPermisos = "";
+    });
     inputDni.addEventListener('blur',function(){
         if(!comprobarInputDni(inputDni)){
             modificarEstado(inputDni, spanDni, "DNI inválido (01234567X)", "2px solid #8A0808");
@@ -183,13 +202,15 @@ function comprobarCampos(){
         }else
             modificarEstado(inputCuentaCorriente, spanCuentaCorriente, "", "2px solid #04B404");
     });
-    if(!checkTerminos.checked){
-        spanTerminos.innerHTML = '<h4>No has aceptado los términos</h4>';
-    }else {
-        spanTerminos.innerHTML = '<h4>Has aceptado los términos</h4>';
-    }
-    document.getElementById('enviar').addEventListener('click', function(){
-        var foco;
+    checkTerminos.addEventListener('blur',function() {
+        if (checkTerminos.checked) {
+            spanTerminos.innerHTML = '';
+        } else {
+            spanTerminos.innerHTML = '<h4>Tienes que aceptar los términos y licencias</h4>';
+        }
+    });
+    enviar.addEventListener('click', function(){
+        var foco = enviar;
             if(!comprobarInputTexto(inputNombre)){
                 foco = inputNombre;
             }else if(!comprobarInputTexto(inputApellido1)){
@@ -204,7 +225,10 @@ function comprobarCampos(){
                 foco = inputTelefono;
             }else if(!comprobarInputUrl(inputUrl)){
                 foco = inputUrl;
-            }else {
+            }else if(!checkTerminos.checked){
+                foco = checkTerminos;
+            }
+            else{
                 if (!comprobarInputRadio(inputSexo, spanSexo)) {
                     foco = inpSexo1;
                 } else{
