@@ -1,0 +1,70 @@
+
+<!DOCTYPE html>
+<!--Mediante el registro de eventos recomendado por la W3C, entrega una página donde muestres información referente a todos los eventos del Ratón.-->
+<!--Puede serte útil la siguiente páginas de librosWeb: introducción a JavaScript e introduccción a Ajax-->
+
+<!--Recuerda comprobarlo en los tres navegadores principales.-->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Eventos de ratón</title>
+    <link rel="stylesheet" href="../css/bootstrap.css" type="text/css">
+    <link rel="stylesheet" href="../css/estilo.css" type="text/css">
+    <script src="js/eventos_raton.js" type="text/javascript"></script>
+</head>
+<body>
+<header id="cabecera">
+    <h1>Eventos de ratón</h1>
+</header>
+<main id="main">
+    <h2>Main</h2>
+    <table id="eventosRaton">
+        <tr>
+            <th>Nombre</th>
+            <th>Descripción</th>
+            <th>Lugar de ejecucción</th>
+        </tr>
+        <tr>
+            <td>Click</td>
+            <td>Cuando se pulsa el botón izquierdo del ratón</td>
+            <td>Main</td>
+        </tr>
+        <tr>
+            <td>Mouseover</td>
+            <td>Cuando el puntero del ratón entra en un elemento</td>
+            <td>Header</td>
+        </tr>
+        <tr>
+            <td>Mouseout</td>
+            <td>Cuando el puntero del ratón sale de un elemento</td>
+            <td>Header</td>
+        </tr>
+        <tr>
+            <td>Doble click</td>
+            <td>Cuando se pulsa dos veces el botón izquierdo del ratón</td>
+            <td>Toda la ventana</td>
+        </tr>
+        <tr>
+            <td>Mousedown</td>
+            <td>Cuando se pulsa cualquier botón del ratón</td>
+            <td>Header</td>
+        </tr>
+        <tr>
+            <td>Mousemove</td>
+            <td>Cuando el puntero del ratón se encuentra sobre un elemento</td>
+            <td>Botón atrás</td>
+        </tr>
+        <tr>
+            <td>Mouseup</td>
+            <td>Cuando se suelta cualquier botón del ratón que haya sido pulsado</td>
+            <td>Botón mouseup</td>
+        </tr>
+    </table>
+    <h3>Datos del evento: </h3>
+    <div id="info_eventos"></div>
+</main>
+<footer>
+    <input type="button" id="atras" value="ATRÁS" /><input type="button" id="mouseup" value="Mouseup" />
+</footer>
+</body>
+</html>

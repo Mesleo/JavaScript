@@ -6,7 +6,12 @@ a:visited {
     text-decoration: none;
 }
 
-#atras, #reset {
+.areas_eventos_teclado{
+    height: 20px;
+    margin-top: 15px;
+}
+
+#atras, #reset, #mouseup {
     background: linear-gradient(65deg, #121010, #FF0000);
     color: #FFFFFF;
     font-weight: bold;
@@ -50,6 +55,17 @@ body {
     box-shadow: 7px 6px 7px #8e8e8e;
 }
 
+#eventosRaton{
+    border: 2px double rgba(2, 77, 11, 0.86);
+    width: 90%;
+    margin:auto;
+}
+
+#eventosRaton td, #eventosRaton th{
+    padding: 0px 6px 1px 6px;
+    border:1px solid rgba(2, 77, 11, 0.86)
+}
+
 .error {
     color: #FA0808;
     font-size: 12px;
@@ -57,6 +73,11 @@ body {
 
 #erroneo {
     color: #FA0808;
+}
+
+#form_eventos_teclado{
+    width: 40%;
+    margin: 0 auto;
 }
 
 .formulario_completito{
@@ -112,6 +133,10 @@ body {
     margin: auto;
 }
 
+h3, h2{
+    text-align: center;
+}
+
 header {
     border: 2px solid;
     background-color: #00951C;
@@ -121,12 +146,27 @@ header {
     margin-bottom: 50px;
 }
 
+#info_eventos{
+    width: 70%;
+    margin: auto;
+    height: 100px;
+    border: 3px groove rgba(159, 63, 0, 0.86);
+    border-radius: 10px;
+    display: block;
+    text-align: center;
+}
+
 input[type=submit], input[type=button] {
     margin: 7px;
     margin-bottom: 15px;
     width: 20%;
     border-radius: 4px;
     box-shadow: 3px 2px 3px;
+}
+
+#main{
+    border: 1px solid;
+    padding-bottom: 20px;
 }
 
 #matriz {
@@ -138,6 +178,11 @@ input[type=submit], input[type=button] {
     margin-left: 15px;
     font-size: 14px;
     vertical-align: 40%;
+}
+
+#res{
+    margin-left: 5px;
+    font-size: 12px;
 }
 
 #resultados div {

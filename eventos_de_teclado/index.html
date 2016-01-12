@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<!--Mediante el registro de eventos recomendado por la W3C, entrega una página donde muestres información referente a todos los eventos del Teclado.-->
+<!--Puede serte útil la siguiente páginas de librosWeb: introducción a JavaScript e introduccción a Ajax-->
+
+
+<!--Recuerda comprobarlo en los tres navegadores principales.-->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Eventos de teclado</title>
+    <link rel="stylesheet" href="../css/bootstrap.css" type="text/css">
+    <link rel="stylesheet" href="../css/estilo.css" type="text/css">
+    <script src="js/eventos_teclado.js" type="text/javascript"></script>
+</head>
+<body>
+<header>
+    <h1>Eventos de teclado</h1>
+</header>
+<main id="main">
+    <h2>Main</h2>
+    <table id="eventosRaton">
+        <tr>
+            <th>Nombre</th>
+            <th>Descripción</th>
+            <th>Lugar de ejecucción</th>
+        </tr>
+        <tr>
+            <td>keydown</td>
+            <td>Cuando se pulsa cualquier tecla del teclado</td>
+            <td>Toda la ventana, excepto en el TextArea</td>
+        </tr>
+        <tr>
+            <td>keypress</td>
+            <td>Cuando se pulsa una tecla correspondiente a un carácter alfanumérico (no se tienen en cuenta telas como SHIFT, ALT, etc.).o</td>
+            <td>TextArea</td>
+        </tr>
+        <tr>
+            <td>keyup</td>
+            <td>Cuando se suelta cualquier tecla pulsada</td>
+            <td>Toda la ventana</td>
+        </tr>
+    </table>
+    <div id="form_eventos_teclado"><textarea class="areas_eventos_teclado" id="textArea" cols="30" rows="10"></textarea><input type="reset" id="res" value="Reset" /></div>
+    <h3>Datos del evento: </h3>
+    <div id="info_eventos"></div>
+</main>
+<footer>
+    <input type="button" id="atras" value="ATRÁS" />
+</footer>
+
+</body>
+</html>
