@@ -1,0 +1,67 @@
+<!--Estudia las distintas formas de almacenamiento en el lado del cliente (cookies, sessionStorage, localStorage...)-->
+
+<!--Entrega una página donde se documenten los métodos (lectura, escritura...), pros y contras.-->
+
+<!--Enlaza cada uno de las distintas formas de almacenamiento con un ejemplo (por ejemplo, que guarde/recupere la configuración de un usuario, como puede ser el login, el color de fondo...)-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Almacenamiento de cookies</title>
+    <link rel="stylesheet" href="../css/bootstrap.css" type="text/css">
+    <link rel="stylesheet" href="../css/estilo.css" type="text/css">
+    <script type="text/javascript" src="js/index.js"></script>
+</head>
+<body>
+    <header><h1>Almacenamiento de cookies</h1></header>
+<main>
+    <table class="almacenamiento">
+        <tr><th class="title_tabla" colspan="2">Document.cookie</th></tr>
+        <tr><th>Método</th><th>Descripción</th></tr>
+        <tr><td>checkCookie</td><td>Compruebo si la cookie existe, si no existe la creo, si existe y acepto el fomulario abro una ventana nueva mostrando el nombre del usuario</td></tr>
+        <tr>
+            <td>getCookie</td>
+            <td>Obtiene el valor o contenido de la cookie</td></tr>
+        <tr>
+            <td>setCookie</td>
+            <td>Crea la cookie con los parámetros pasados (nombre de la cookie, valor, tiempo de expiración)</td>
+        </tr>
+        <tr>
+            <td>eliminarCookie</td>
+            <td>Elimina la cookie creando una con el mismo nombre pero con un tiempo de expiración negativo</td>
+        </tr>
+        <tr>
+            <td colspan="2"><a href="cookie.html"><input type="button" class="ejemplo_cookie" id="ver_ejemplo_cookie" value="Ejemplo"></a></td></tr>
+    </table>
+    <table class="almacenamiento">
+        <tr><th class="title_tabla" colspan="2">LocalStorage</th></tr>
+        <tr><th>Método</th><th>Descripción</th></tr>
+        <tr>
+            <td>comprobarCookie</td>
+            <td>Compruebo si la cookie existe, si no existe la creo, si existe y acepto el fomulario abro una ventana nueva mostrando el nombre del usuario</td></tr>
+        <tr>
+            <td>localStorage.getItem</td>
+            <td>Obtiene el valor o contenido pasándole como parámetro el nombre de la cookie</td></tr>
+        <tr>
+            <td>localStorage.setItem</td>
+            <td>Crea la cookie con los parámetros pasados (nombre de la cookie y valor). Ésta no necesita tiempo de expiración</td>
+        </tr>
+        <tr>
+            <td>localStorage.removeItem</td>
+            <td>Elimina la cookie pasándole como parámetro el nombre de dicha cookie</td>
+        </tr>
+        <tr>
+            <td colspan="2"><a href="localstorage.html" ><input type="button" class="ejemplo_cookie" id="ver_ejemplo_cookie" value="Ejemplo"></a></td></tr>
+    </table>
+    <section>
+        <article>
+            <p>La característica principal que las diferencia es que con "document.cookie" las cookies tienen un tiempo de expiración mientras
+            que con "localStorage" no, es decir, se deberían eliminar manualmente desde el navegador</p>
+        </article>
+    </section>
+</main>
+    <footer>
+        <input type="button" id="atras" value="ATRÁS" />
+    </footer>
+</body>
+</html>

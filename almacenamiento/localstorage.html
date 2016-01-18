@@ -1,0 +1,33 @@
+<!--Estudia las distintas formas de almacenamiento en el lado del cliente (cookies, sessionStorage, localStorage...)-->
+
+<!--Entrega una página donde se documenten los métodos (lectura, escritura...), pros y contras.-->
+
+<!--Enlaza cada uno de las distintas formas de almacenamiento con un ejemplo (por ejemplo, que guarde/recupere la configuración de un usuario, como puede ser el login, el color de fondo...)-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Almacenamiento</title>
+    <link rel="stylesheet" href="../css/bootstrap.css" type="text/css">
+    <link rel="stylesheet" href="../css/estilo.css" type="text/css">
+    <script type="text/javascript" src="js/almacenamiento_localstorage.js"></script>
+</head>
+<body>
+<header><h1>Almacenamiento (LocalStorage)</h1></header>
+<main>
+    <form action="#" id="login_almacenamiento">
+        <label>Usuario: </label><input type="text" id="nombre_usuario">
+        <label>Contraseña: </label><input type="password" id="contrasenia_usuario">
+        <label for="recordar">Recordar </label><input type="checkbox" id="recordar">
+        <div>
+            <input type="button" id="enviar_login" value="Aceptar">
+            <input type="button" id="eliminar_cookie" value="Eliminar cookie">
+        </div>
+    </form>
+    <span id="mensaje_bienvenida"></span>
+</main>
+<footer>
+    <input type="button" id="atras" value="ATRÁS" />
+</footer>
+</body>
+</html>
