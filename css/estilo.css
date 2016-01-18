@@ -6,6 +6,17 @@ a:visited {
     text-decoration: none;
 }
 
+.almacenamiento{
+    border: 4px groove #2b542c;
+    width:80%;
+    margin: 20px auto;
+}
+
+.almacenamiento th, .almacenamiento td{
+    padding:3px 5px 3px 5px;
+    border: 2px inset #2b542c;
+}
+
 .areas_eventos_teclado{
     height: 20px;
     margin-top: 15px;
@@ -53,6 +64,18 @@ body {
     border: 2px solid #00dd16;
     border-radius: 10px 2px 10px 2px;
     box-shadow: 7px 6px 7px #8e8e8e;
+}
+
+.ejemplo_cookie{
+    margin: auto;
+    background-color: rgba(2, 133, 16, 0.86);
+    border: 2px outset rgba(2, 117, 14, 0.86);
+    color: white;
+}
+
+.ejemplo_cookie:active{
+    background-color: rgba(2, 83, 16, 0.86);
+    border: 2px outset rgba(2, 74, 11, 0.86);
 }
 
 #eventosRaton{
@@ -164,6 +187,43 @@ input[type=submit], input[type=button] {
     box-shadow: 3px 2px 3px;
 }
 
+#login_almacenamiento{
+    width: 45%;
+    border: 3px double #72d664;
+    box-shadow: 5px 4px 1px 1px #4cae4c;
+    border-radius: 10px 0px 10px 0px;
+    padding: 15px;
+    margin: auto;
+}
+
+#login_almacenamiento label{
+    margin: auto;
+    text-align: justify;
+    margin-right: 10px;
+    margin-top: 15px;
+}
+#login_almacenamiento input[type=text], #login_almacenamiento input[type=password]{
+    display: block;
+}
+
+#login_almacenamiento input[type=button]{
+    width: 40%;
+    font-size: .8em;
+    background: linear-gradient(175deg, #4dbb56, #ac997d);
+    display: inline-block;
+    color: white;
+    border: 2px outset #00dd16;
+    font-family: "Roboto";
+}
+
+#login_almacenamiento input[type=button]:active{
+    width: 40%;
+    font-size: .8em;
+    background: linear-gradient(175deg, #3e9247, #403830);
+    display: inline-block;
+    border: 2px inset #00dd16;
+}
+
 #main{
     border: 1px solid;
     padding-bottom: 20px;
@@ -188,6 +248,10 @@ input[type=submit], input[type=button] {
 #resultados div {
     width: 30%;
     display: inline-block;
+}
+
+.title_tabla{
+    font-size: 1.2em;
 }
 
 .valido{
