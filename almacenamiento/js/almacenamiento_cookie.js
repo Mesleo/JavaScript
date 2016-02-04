@@ -35,7 +35,6 @@ function mostrarVentanaBienvenida(user) {
 }
 
 function checkCookie(info) {
-
     var user = getCookie("usuario");
     var pass = getCookie("password");
     var nomb = document.getElementById('nombre_usuario');
