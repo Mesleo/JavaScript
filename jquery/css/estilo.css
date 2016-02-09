@@ -1,0 +1,324 @@
+a {
+    text-decoration: none;
+}
+
+a:visited {
+    text-decoration: none;
+}
+
+.almacenamiento{
+    border: 4px groove #2b542c;
+    width:80%;
+    margin: 20px auto;
+}
+
+.almacenamiento th, .almacenamiento td{
+    padding:3px 5px 3px 5px;
+    border: 2px inset #2b542c;
+}
+
+.areas_eventos_teclado{
+    height: 20px;
+    margin-top: 15px;
+}
+
+#atras, #reset, #mouseup {
+    background: linear-gradient(65deg, rgba(255, 130, 0, 0.91), #FF8800);
+    color: #FFFFFF;
+    font-weight: bold;
+    width: 120px;
+    height: 30px;
+    border: 0;
+    display: inline-block;
+    margin-left: 20%;
+    border-radius: 3px;
+    margin-top: 25px;
+    outline: none;
+    box-shadow: 0 4px 0 #db6e00;
+}
+
+#atras:active, #reset:active {
+    position: relative;
+    box-shadow: 0px 2px 0 #db6e00;
+    top: 3px;
+}
+
+body {
+    background: linear-gradient(to bottom, #E8EAF6, #3F51B5);
+    font-family: 'Bangers';
+    font-size: 16px;
+    min-height: 450px;
+    width: 90%;
+    margin: 0 auto;
+    border: 1px solid;
+    margin-bottom: 20px;
+    padding: 0;
+    box-shadow: 10px 8px 9px #666262;
+}
+
+body p{
+    width: 80%;
+    margin: 0 auto;
+    margin-bottom: 8px;
+}
+
+#celda_matriz {
+    border: 2px solid rgba(0, 0, 0, 0.82);
+    background-color: rgba(0, 50, 232, 0.82);
+}
+
+#contenedor{
+    width: 100%;
+    min-height: 300px;
+}
+
+#contenedor main section article a{
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+    text-decoration: none;
+    color: #080df0;
+}
+
+#contenedor main section article a:hover{
+    color: rgba(27, 68, 255, 0.87);
+}
+
+#datos_gato {
+    width: 50%;
+    margin-top: 10px;
+    padding: 10px;
+    background: linear-gradient(80deg, #a6795c, #393939);
+    border: 2px solid #00dd16;
+    border-radius: 10px 2px 10px 2px;
+    box-shadow: 7px 6px 7px #8e8e8e;
+}
+
+.ejemplo_cookie{
+    margin: auto;
+    background-color: rgba(2, 133, 16, 0.86);
+    border: 2px outset rgba(2, 117, 14, 0.86);
+    color: white;
+}
+
+.ejemplo_cookie:active{
+    background-color: rgba(2, 83, 16, 0.86);
+    border: 2px outset rgba(2, 74, 11, 0.86);
+}
+
+#eventosRaton{
+    border: 2px double rgba(2, 77, 11, 0.86);
+    width: 90%;
+    margin:auto;
+}
+
+#eventosRaton td, #eventosRaton th{
+    padding: 0px 6px 1px 6px;
+    border:1px solid rgba(2, 77, 11, 0.86)
+}
+
+.error {
+    color: #FA0808;
+    font-size: 12px;
+}
+
+#erroneo {
+    color: #FA0808;
+}
+
+#form_eventos_teclado{
+    width: 40%;
+    margin: 0 auto;
+}
+
+.formulario_completito{
+    width: 90%;
+    margin: auto;
+    border: 2px groove #000000;
+    border-radius: 0px 30px 0px 30px;
+    box-shadow: 10px 8px 15px 5px #8e8e8e;
+    padding: 20px;
+    background-color: rgba(116, 109, 113, 0.86);
+    color: #000000;
+    font-family: "Times New Roman";
+    font-size: 14px;
+}
+
+.formulario_completito div label{
+    width: 35%;
+    display: inline-block;
+    vertical-align: top;
+    margin-right: 50px;
+    margin-bottom: 10px;
+}
+
+.formulario_completito input[type=text], .formulario_completito input[type=date], .formulario_completito input[type=email],
+.formulario_completito input[type=number], .formulario_completito input[type=url], .formulario_completito input[type=password],.formulario_completito input[type=password], .formulario_completito select{
+    width: 30%;
+    border-radius: 10px;
+    border: 1px inset #363d46;
+    background-color: #fdfff6;
+    padding: 3px;
+    margin-right: 5px;
+    outline: none;
+}
+
+.formulario_completito input[type=radio]{
+    margin-bottom: 10px;
+    margin-top: 8px;
+}
+
+.formulario_completito input[type=range]{
+    margin-top: 5px;
+    background: #110000;
+}
+
+.formulario_completito #terminos{
+    margin-top: 5px;
+    height: 15px;
+    width: 15px;
+}
+
+.formulario_completito #div_enviar{
+    width:60%;
+    margin: auto;
+}
+
+footer{
+    background-color: #0f113d;
+    color: #fff;
+    min-height: 80px;
+    margin-bottom: 0px;
+}
+
+
+footer p{
+    padding: 10px 0px;
+    text-align: center;
+    margin: 0 auto;
+}
+h3, h2{
+    text-align: center;
+}
+
+header {
+    border: 2px solid;
+    background-color: #2a376f;
+    /*border-radius: 20px 20px 0px 0px;*/
+    min-height: 70px;
+    color: #fff;
+    padding: 20px;
+    margin: 0;
+}
+
+#info_eventos{
+    width: 70%;
+    margin: auto;
+    height: 100px;
+    border: 3px groove rgba(159, 63, 0, 0.86);
+    border-radius: 10px;
+    display: block;
+    text-align: center;
+}
+
+input[type=submit], input[type=button] {
+    margin: 7px;
+    margin-bottom: 15px;
+    width: 20%;
+    border-radius: 4px;
+    box-shadow: 3px 2px 3px;
+}
+
+#lista_menu_principal{
+    list-style: none;
+    font-size: 2em;
+    display: block;
+}
+
+#lista_menu_principal li{
+    width: 22%;
+    display: inline-block;
+}
+
+#login_almacenamiento{
+    width: 45%;
+    border: 3px double #72d664;
+    box-shadow: 5px 4px 1px 1px #4cae4c;
+    border-radius: 10px 0px 10px 0px;
+    padding: 15px;
+    margin: auto;
+}
+
+#login_almacenamiento label{
+    margin: auto;
+    text-align: justify;
+    margin-right: 10px;
+    margin-top: 15px;
+}
+#login_almacenamiento input[type=text], #login_almacenamiento input[type=password]{
+    display: block;
+}
+
+#login_almacenamiento input[type=button]{
+    width: 40%;
+    font-size: .8em;
+    background: linear-gradient(175deg, #4dbb56, #ac997d);
+    display: inline-block;
+    color: white;
+    border: 2px outset #00dd16;
+    font-family: "Roboto";
+}
+
+#login_almacenamiento input[type=button]:active{
+    width: 40%;
+    font-size: .8em;
+    background: linear-gradient(175deg, #3e9247, #403830);
+    display: inline-block;
+    border: 2px inset #00dd16;
+}
+
+#main{
+    border: 1px solid;
+    padding-bottom: 20px;
+}
+
+#matriz {
+    background-color: rgba(0, 50, 232, 0.82);
+    border: 2px solid rgba(0, 0, 0, 0.82);
+}
+
+#preguntas_teoricas{
+    width: 90%;
+    margin: auto;
+    margin-top: 15px;
+}
+
+.rango{
+    margin-left: 15px;
+    font-size: 14px;
+    vertical-align: 40%;
+}
+
+#res{
+    margin-left: 5px;
+    font-size: 12px;
+}
+
+#resultados div {
+    width: 30%;
+    display: inline-block;
+}
+
+.title_tabla{
+    font-size: 1.2em;
+}
+
+.valido{
+    border: 1px solid #110000;
+    box-shadow: 1px 1px 1px 1px #656387;
+}
+
+.invalido{
+    border: 1px solid red;
+    box-shadow: 2px 2px 2px 1px #870808;
+}
