@@ -175,6 +175,12 @@ input[type=submit]:active, input[type=button]:active{
     box-shadow: none;
 }
 
+textarea{
+    width: 80%;
+    margin: 0 auto;
+    max-width: 90%;
+}
+
 .valido{
     border: 1px solid #110000;
     box-shadow: 1px 1px 1px 1px #656387;
