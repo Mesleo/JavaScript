@@ -3,8 +3,8 @@
  */
 
 $(function(){
-    $(".verde").on("click", function(e){
-        var elem = $(this);
+    $(document.body).on("click", ".verde", function(e){
+        var elem = $(e.target);
         if (elem.html()!="Hiciste clic!!"){
             elem.html("Hiciste clic!!");
         }else{
