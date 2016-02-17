@@ -5,7 +5,6 @@
     function muestraRestantesCola(){
         var funcionesEnCola = $("#micapa").queue("micola").length;
         var funcionesEnColaPredeterminada = $("#micapa").queue().length;
-        //console.log("Cola 'micola':", $("#micapa").queue("micola"));
         var textoMostrar = "Hay " + funcionesEnCola + " funciones de efectos en la cola 'micola'";
         textoMostrar += "<br>Hay " + funcionesEnColaPredeterminada + " funciones de efectos en la cola por defecto";
         $("#mensaje").html(textoMostrar);
@@ -65,10 +64,10 @@
         capa.fadeTo(500, 0.3);
         capa.fadeTo(1200, 1);
         capa.animate({
-            "left": "350px"
+            "left": "37%"
         },1200);
         capa.animate({
-            "left": "100px"
+            "left": "5%"
         },1000, ocultaMuestra);
     }
 

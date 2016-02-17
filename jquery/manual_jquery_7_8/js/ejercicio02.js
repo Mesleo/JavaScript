@@ -1,13 +1,13 @@
 /**
  * Created by anonimo1 on 08/02/2016.
  */
-var contar = (function(){
+(function(){
     //Plugin cuentaCaracteres
     jQuery.fn.cuentaCaracteres = function() {
         //para cada uno de los elementos del objeto jQuery
         this.each(function(){
             //creo una variable elem con el elemento actual, suponemos un textarea
-            elem = $(this);
+            var elem = $(this);
             //creo un elemento DIV sobre la marcha
             var contador = $('<div>Contador caracteres: ' + elem.prop("value").length + '</div>');
             //inserto el DIV después del elemento textarea
@@ -29,6 +29,4 @@ var contar = (function(){
     $(document).ready(function(){
         $("textarea").cuentaCaracteres();
     })
-});
-
-contar();
+})();
