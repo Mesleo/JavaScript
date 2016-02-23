@@ -101,6 +101,10 @@ html{
     background-color: rgba(24, 50, 186, 0.67);
 }
 
+#indice_titulo{
+    text-align: center;
+}
+
 #info{
     width: 85%;
     margin: auto;
@@ -135,7 +139,7 @@ input[type=submit]:active, input[type=button]:active{
 }
 
 #indice_ejericios li{
-    width: 80%;
+    width: 100%;
 }
 
 #main{
@@ -189,7 +193,28 @@ input[type=submit]:active, input[type=button]:active{
         padding: 20px;
     }
 
+    #indice_titulo{
+        text-align: left;
+    }
+
     body{
         min-width: 90%;
+    }
+    #indice_ejericios{
+        list-style: none;
+        font-size: 1.8em;
+        width: 100%;
+        display: block;
+        -webkit-column-count: 2;
+        -moz-column-count: 2;
+        -ms-column-count: 2;
+        -o-column-count: 2;
+    }
+
+    #indice_ejericios li a{
+        line-height: 50px;
+        display: block;
+        text-align: left !important;
+        margin-right: 5%;
     }
 }
