@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Javier Benítez del Pozo</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script type="text/javascript" src="js/script.min.js"></script>
+    <script type="text/javascript" src="../js/principal.js"></script>
+</head>
+<body>
+<header><h1>Javier Benítez del Pozo</h1></header>
+<form action="#">
+    URL: <input type="text" id="url" size="70" />
+    <input type="submit" id="submitRequest" value="Mostrar contenidos" />
+</form>
+<div id="contenedor">
+<div id="principal">
+    <h2>Contenidos del archivo:</h2>
+    <div id="htmlContent"></div>
+
+    <h2>Cabeceras HTTP de la respuesta del servidor:</h2>
+    <div id="headers"></div>
+</div>
+
+<div id="secundario">
+    <h2>Estados de la petición:</h2>
+    <div id="states"></div>
+
+    <h2>Código de estado:</h2>
+    <div id="stateCode"></div>
+</div>
+<div id="div_atras">
+    <input type="submit" id="atras" value="Atrás">
+</div>
+<footer><p>Design by Javier Benítez</p></footer>
+</div>
+</body>
+</html>

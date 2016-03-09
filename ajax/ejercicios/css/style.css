@@ -1,0 +1,23 @@
+body {
+    background-color: rgba(202, 46, 7, 0.73);
+    font: 13px Arial, Helvetica, sans-serif; }
+h2 { margin-bottom: 0; font-size: 1.2em; }
+#recurso, #enviar { padding: .3em; font-size: 1.2em; }
+#principal {
+    display: inline-block;
+    width: 70%; }
+#secundario { display: inline-block; vertical-align: top; width: 25%; }
+#htmlContent, #states, #headers, #stateCode {
+    border: 2px solid #CCC;
+    background: #FAFAFA;
+    padding: 1em;
+    white-space: pre;
+}
+#htmlContent {
+    min-height: 400px;
+    max-height: 600px;
+    overflow: scroll;
+}
+#states { min-height: 200px; }
+#headers { min-height: 200px; }
+#stateCode { min-height: 100px; font-size: 1.5em; }
